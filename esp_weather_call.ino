@@ -30,14 +30,14 @@ void http_call(char* host, char* path, int port) {
 
 void setup() {
   Serial.begin(115200);
-  WiFi.begin("cookie", "0317137263");
+  WiFi.begin("cookie", "0317137263"); // wifi name passwd
   Serial.println("\nBegin");
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
   Serial.println(WiFi.localIP()); 
-  http_call("web.kma.go.kr", "/wid/queryDFSRSS.jsp?zone=4113552000", 80);
+  http_call("web.kma.go.kr", "/wid/queryDFSRSS.jsp?zone=4113552000", 80); // zone = 기상청의 
 }
 
 void loop() {}
